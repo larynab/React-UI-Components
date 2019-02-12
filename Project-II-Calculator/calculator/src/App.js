@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
 
+import ButtonValue from "./components/ButtonComponents/ButtonValue"
+
 const App = () => {
   return (
-    <div>
-     
+    <div className="app">
+      <ButtonValue />
     </div>
   );
 };
