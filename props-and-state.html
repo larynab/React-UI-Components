@@ -18,7 +18,14 @@
 
 const BartComponent = props => {
     const {bart} = props;
-    return (<div></div>);
+    return (
+        <div>
+            <h3> Name: {bart.name}</h3>
+            <p> Identity: {bart.identity}</p>
+            <p> Age: {bart.age};</p>
+            {[<div>Array Element 1</div>, <div>Array Element  2</div>]} 
+        </div>
+    );
 };
 
 const App = () => {
@@ -31,7 +38,7 @@ const App = () => {
         catchphrases: ['Aye Carumba!', 'Eat my shorts', "I didn't do it!"],  
         best_friend: 'Milhouse Van Houten',
     };
-    return <div><BardComponent bart={BartProfile}/></div>;
+    return <div><BartComponent bart={BartProfile}/></div>;
 };    
 ReactDOM.render(<App />, document.getElementById('root'));
 
