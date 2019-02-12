@@ -17,6 +17,7 @@
 <script type="text/babel">
 
 const BartComponent = props => {
+    const {bart} = props;
     return (<div></div>);
 };
 
@@ -30,7 +31,7 @@ const App = () => {
         catchphrases: ['Aye Carumba!', 'Eat my shorts', "I didn't do it!"],  
         best_friend: 'Milhouse Van Houten',
     };
-    return <div>Greetings</div>;
+    return <div><BardComponent bart={BartProfile}/></div>;
 };    
 ReactDOM.render(<App />, document.getElementById('root'));
 
