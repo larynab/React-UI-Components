@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hi world from ReactJS</title>
+</head>
+
+<body>
+ <div id="root"></div>
+</body>
+
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+<script type="text/babel">
+   /*
+    const createElement = (type, className, strContent) => {
+        const customElement = document.createElement(type);
+        const content = document.createTextNode(strContent);
+        customElement.append(content);
+        customElement.classList.add(className);
+
+        return customElement;
+    };
+    */
+const rootDiv = document.getElementById('root');
+
+const header = (
+    <div className="header">
+        <h1>Hi World</h1>
+    </div>
+);
+    /*
+    console.log(header);
+    ReactDOM.render(header, rootDiv);
+    */
+const HeaderElement = () => { //functional component => <HeaderElement /> or <HeaderElement></HeaderElement>
+    return (
+        <div className="header">
+            <h1>Hi World</h1>
+        </div>
+    );
+};
+
+const SubHeader = () => {
+    return (
+        <div className="small-header">
+            <h4>Meow</h4>
+        </div>
+    );
+}
+   /*
+    const header = React.createElement("h1", {className: "header"}, "Hello World!");
+    */
+    // document.body.insertBefore(header, rootDiv);
+const App = () => {
+    return (
+        <div className="app">
+            <HeaderElement />
+            <HeaderElement />
+            <HeaderElement />
+            <HeaderElement />
+            <SubHeader />
+        </div>
+    );
+};
+
+console.log(<HeaderElement />);
+ReactDOM.render(<App />, rootDiv);
+
+    
+
+</script>
+</html>
